@@ -13,3 +13,24 @@ console.log("Word: " + word);
 
 // console the character length of the word
 console.log("Word Length: " + word.length);
+
+var answerArray = [];
+
+for (i = 0; i < word.length; i++) {
+    answerArray[i] = "_";
+}
+
+$(document).on("keypress", function (e) {
+    // use e.which
+    console.log(e.key);
+    if (word.indexOf(e.key) < 0) {
+        console.log("Letter not found.");
+    } else {
+        console.log("Letter found!");
+    }
+    console.log(answerArray);
+});
+
+
+
+
