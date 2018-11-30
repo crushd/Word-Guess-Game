@@ -1,5 +1,6 @@
 // set up the list of words
 var wordList = ["amber",
+                "bitterness",
                 "vorlauf",
                 "sparge",
                 "grain",
@@ -97,6 +98,9 @@ for (i = 0; i < word.length; i++) {
                 
                 } else if (word === "amber") {
                         document.getElementById("description-text").innerHTML = "Amber ale is an emerging term used in Australia, France and North America for pale ales brewed with a proportion of amber malt and sometimes crystal malt to produce an amber colour generally ranging from light copper to light brown.";
+                
+                    } else if (word === "bitterness") {
+                            document.getElementById("description-text").innerHTML = "The perception of a bitter flavor, in beer from iso-alpha-acid in solution (derived from hops). It is measured in International Bitterness Units (IBU).";
 
                 } else if (word === "brewpub") {
                     document.getElementById("description-text").innerHTML = "Pub that makes its own beer and sells at least 50% of it on premises. Also known in Britain as a home-brew house and in Germany as a house brewery.";
