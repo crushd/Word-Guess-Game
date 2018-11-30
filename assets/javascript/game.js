@@ -69,13 +69,14 @@ for (i = 0; i < word.length; i++) {
             document.getElementById("attempts-remaining").innerHTML = "Attempts remaining: " + (maxTrys - tryCounter);
             document.getElementById("wrongList").innerHTML = wrongArray.join(" ");
             
+            
+            wrongArray.push(e.key);
+            console.log("wrong list: " + wrongArray);
+
             //console.log("Remaining: " + remainingLetters);
             if (tryCounter === maxTrys) {
                 document.getElementById("lose").innerHTML = "Sorry, Game Over";
             }
-            
-            wrongArray.push(e.key);
-            console.log("wrong list: " + wrongArray);
 
         } else {
             //console.log("Letter found!" + word.indexOf(e.key));
@@ -134,6 +135,7 @@ for (i = 0; i < word.length; i++) {
 
                 $(document).ready(function(){
                     $('#attempts-remaining').css('visibility', 'hidden');
+                    $('#wrongList').css('visibility', 'hidden');
                     $('#description').css('visibility', 'visible');
                 });
 

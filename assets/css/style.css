@@ -7,7 +7,8 @@ body {
     font-family: 'Lobster', cursive;
     color:white;
     background: url(../images/beer1.jpg) no-repeat center center;
-    background-size: 100%;
+    background-size: 75%;/**/
+    background-color: black;
 }
 
 header h1 {
@@ -38,4 +39,88 @@ h2 #attempts-remaining {
     color: black;
     font-family: 'Roboto', sans-serif;
     width: 30rem;
+    /*box-shadow: 2px 2px #ff0000;*/
 }
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+    header h1 {
+        font-size:2rem;
+        color:yellow;
+    }
+    
+    #game-start {
+        font-size:1rem;
+    }
+
+    .result {
+        font-size: 1em;
+    }
+
+    #attempts-remaining {
+        font-size:.5em;
+    }
+
+    .padding {
+        padding:3rem 0 0 0;
+    }
+
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+    header h1 {
+        font-size:3rem;
+        color:yellow;
+    } 
+    
+    #game-start {
+        font-size:1.5rem;
+    }
+
+    .padding {
+        padding:7rem 0 0 0;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+    header h1 {
+        font-size:3rem;
+        color:yellow;
+    }
+    
+    #game-start {
+        font-size:1.5rem;
+    }
+
+    .padding {
+        padding:7rem 0 0 0;
+    }
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1050px) {
+    header h1 {
+        font-size:5em;
+        color:yellow;
+    }
+    
+    #game-start {
+        font-size:3rem;
+    }
+
+    .padding {
+        padding:15rem 0 0 0;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
