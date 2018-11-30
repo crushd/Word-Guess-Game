@@ -57,31 +57,42 @@ for (i = 0; i < word.length; i++) {
 
     $(document).on("keypress", function (e) {
 
-        console.log(e.key);
+        console.log(e.key.toLowerCase());
         if (word.indexOf(e.key.toLowerCase()) < 0) {
             //console.log("Letter not found.");
-            tryCounter++;
-            wrongArray.push(e.key);
+
+            if (wrongArray.indexOf(e.key.toLowerCase()) < 0) {
+                wrongArray.push(e.key);
+                tryCounter++;
+            }
 
             document.getElementById("game-start").innerHTML = answerArray.join(" ");
             document.getElementById("attempts-remaining").innerHTML = "Attempts remaining: " + (maxTrys - tryCounter);
             document.getElementById("wrongList").innerHTML = wrongArray.join(" ");
             
 
-            //console.log("Remaining: " + remainingLetters);
+            console.log("Remaining: " + remainingLetters);
             if (tryCounter === maxTrys) {
                 document.getElementById("lose").innerHTML = "Sorry, Game Over";
             }
 
         } else {
             //console.log("Letter found!" + word.indexOf(e.key));
-            
+            console.log("Remaining: " + remainingLetters);
             for (var j=0 ; j < word.length ; j++) {
+                
                 element = word.charAt(j);
 
                 if (e.key.toLowerCase() === element) {
+                    
                     answerArray[j] = e.key.toLowerCase();
-                    remainingLetters--;
+                    
+                    if (answerArray.indexOf(e.key.toLowerCase()) === -1) {
+                        remainingLetters--;
+                    }
+
+                    console.log("answer index: " + answerArray.indexOf(e.key.toLowerCase()));
+                
                 }
 
             }
@@ -99,8 +110,8 @@ for (i = 0; i < word.length; i++) {
                 } else if (word === "amber") {
                         document.getElementById("description-text").innerHTML = "Amber ale is an emerging term used in Australia, France and North America for pale ales brewed with a proportion of amber malt and sometimes crystal malt to produce an amber colour generally ranging from light copper to light brown.";
                 
-                    } else if (word === "bitterness") {
-                            document.getElementById("description-text").innerHTML = "The perception of a bitter flavor, in beer from iso-alpha-acid in solution (derived from hops). It is measured in International Bitterness Units (IBU).";
+                } else if (word === "bitterness") {
+                        document.getElementById("description-text").innerHTML = "The perception of a bitter flavor, in beer from iso-alpha-acid in solution (derived from hops). It is measured in International Bitterness Units (IBU).";
 
                 } else if (word === "brewpub") {
                     document.getElementById("description-text").innerHTML = "Pub that makes its own beer and sells at least 50% of it on premises. Also known in Britain as a home-brew house and in Germany as a house brewery.";
