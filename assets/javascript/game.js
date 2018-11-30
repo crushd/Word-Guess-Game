@@ -1,5 +1,6 @@
 // set up the list of words
-var wordList = ["vorlauf",
+var wordList = ["amber",
+                "vorlauf",
                 "sparge",
                 "grain",
                 "hops",
@@ -12,7 +13,6 @@ var wordList = ["vorlauf",
                 "porter",
                 "fermentation",
                 "ale",
-                "amber",
                 "bung",
                 "brewpub",
                 "lauter",
@@ -41,7 +41,7 @@ console.log("Word: " + word);
 var answerArray = [];
 var wrongArray = [];
 var remainingLetters = word.length;
-var maxTrys = 5;
+var maxTrys = 10;
 var tryCounter = 0;
 
 for (i = 0; i < word.length; i++) {
@@ -101,6 +101,9 @@ for (i = 0; i < word.length; i++) {
                 } else if (word === "fermentation") {
                     document.getElementById("description-text").innerHTML = "Conversion of sugars into ethyl alcohol and carbon dioxide, through the action of yeast.";
 
+                } else if (word === "grain") {
+                    document.getElementById("description-text").innerHTML = "Crushed, malted grains are soaked in hot water to convert starches into sugar. This results is a sugary liquid called wort.";
+
                 } else if (word === "grist") {
                     document.getElementById("description-text").innerHTML = "Brewers' term for milled grains, or the combination of milled grains to be used in a particular brew. Derives from the verb to grind. Also sometimes applied to hops.";
                     
@@ -112,7 +115,10 @@ for (i = 0; i < word.length; i++) {
 
                 } else if (word === "lauter") {
                     document.getElementById("description-text").innerHTML = "To run the wort from the mash tun. From the German word to clarify. A lauter tun is a separate vessel to do this job. It uses a system of sharp rakes to achieve a very intensive extraction of malt sugars.";
-                    
+
+                } else if (word === "pale ale") {
+                    document.getElementById("description-text").innerHTML = "Pale ale is an ale made with predominantly pale malt. The highest proportion of pale malts results in a lighter colour. The term "pale ale" first appeared around 1703 for beers made from malts dried with coke, which resulted in a lighter colour than other beers popular at that time.";
+
                 } else if (word === "sparge") {
                     document.getElementById("description-text").innerHTML = "To spray grist with hot water in order to remove soluble sugars (maltose). This takes place at the end of the mash.";
                     

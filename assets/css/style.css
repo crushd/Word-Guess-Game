@@ -47,6 +47,7 @@ h2 #attempts-remaining {
     font-family: 'Roboto', sans-serif;
     max-width: 30rem;
     width:95%;
+    border:2px yellow dotted;
     /*box-shadow: 2px 2px #ff0000;*/
 }
 
