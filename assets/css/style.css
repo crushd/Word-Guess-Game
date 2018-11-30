@@ -6,3 +6,11 @@ html,body {
 .padding {
     padding:10rem 0;
 }
+
+h2 #attempts-remaining {
+    text-align:center;
+}
+
+h1 #winner {
+    color:darkgreen;
+}
