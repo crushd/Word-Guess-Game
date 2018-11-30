@@ -135,6 +135,8 @@ for (i = 0; i < word.length; i++) {
                 } else if (word === "specific gravity") {
                     document.getElementById("description-text").innerHTML = "A measure of the density of a liquid or solid compared to that of water ((1.000 at 39°F (4°C)).";
                     
+                } else if (word === "stout") {
+                    document.getElementById("description-text").innerHTML = "Stout is a dark beer. There are a number of variations including Baltic porter, milk stout, and imperial stout; the most common variation is dry stout, exemplified by Guinness Draught, the world's best selling stout. Stout is a top-fermented beer.";
                 } else if (word === "vorlauf") {
                     document.getElementById("description-text").innerHTML = "Vorlauf is derived from the German verb vorlaufen which means to 'run ahead'. In brewing this is when you initially run off wort from your lauter tun into a vessel called a grant. You then keep recirculating the runnings from the grant back on top of the grain bed until the wort begins to run clear.";
                    
