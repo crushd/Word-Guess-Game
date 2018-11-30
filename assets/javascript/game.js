@@ -39,6 +39,7 @@ console.log("Word: " + word);
 //console.log("Word Length: " + word.length);
 
 var answerArray = [];
+var wrongArray = [];
 var remainingLetters = word.length;
 var maxTrys = 5;
 var tryCounter = 0;
@@ -59,16 +60,22 @@ for (i = 0; i < word.length; i++) {
         if (word.indexOf(e.key.toLowerCase()) < 0) {
             //console.log("Letter not found.");
             tryCounter++;
+            // wrongArray = wrongArray.push(e.key);
+            // console.log("wrong list: " + wrongArray);
             
             // answerArray[word.indexOf(e.key)] = e.key;
 
             document.getElementById("game-start").innerHTML = answerArray.join(" ");
             document.getElementById("attempts-remaining").innerHTML = "Attempts remaining: " + (maxTrys - tryCounter);
+            document.getElementById("wrongList").innerHTML = wrongArray.join(" ");
             
             //console.log("Remaining: " + remainingLetters);
             if (tryCounter === maxTrys) {
                 document.getElementById("lose").innerHTML = "Sorry, Game Over";
             }
+            
+            wrongArray.push(e.key);
+            console.log("wrong list: " + wrongArray);
 
         } else {
             //console.log("Letter found!" + word.indexOf(e.key));
@@ -87,6 +94,7 @@ for (i = 0; i < word.length; i++) {
                     
             document.getElementById("game-start").innerHTML = answerArray.join(" ");
             document.getElementById("attempts-remaining").innerHTML = "Attempts remaining: " + (maxTrys - tryCounter);
+            document.getElementById("wrongList").innerHTML = wrongArray.join(" ");
 
             //console.log("Remaining: " + remainingLetters);
             if (remainingLetters === 0) {
