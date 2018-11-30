@@ -6,7 +6,7 @@ html,body {
 body {
     font-family: 'Lobster', cursive;
     color:white;
-    background: url(../images/beer1.jpg) no-repeat center center;
+    /*background: url(../images/beer1.jpg) no-repeat center center;*/
     background-size: 75%;/**/
     background-color: black;
 }
@@ -18,6 +18,13 @@ header h1 {
 
 .padding {
     padding:20rem 0 0 0;
+}
+
+.jumbotron {
+    background-size:100%;
+    background-color:black;
+    /*background: url(../images/beer1.jpg) no-repeat center center;*/
+    height:100%;
 }
 
 #game-start {
@@ -38,7 +45,8 @@ h2 #attempts-remaining {
 .card {
     color: black;
     font-family: 'Roboto', sans-serif;
-    width: 30rem;
+    max-width: 30rem;
+    width:95%;
     /*box-shadow: 2px 2px #ff0000;*/
 }
 
@@ -53,7 +61,7 @@ h2 #attempts-remaining {
     }
     
     #game-start {
-        font-size:1rem;
+        font-size:1.5rem;
     }
 
     .result {
@@ -62,10 +70,6 @@ h2 #attempts-remaining {
 
     #attempts-remaining {
         font-size:.5em;
-    }
-
-    .padding {
-        padding:3rem 0 0 0;
     }
 
 } 
@@ -79,11 +83,7 @@ h2 #attempts-remaining {
     } 
     
     #game-start {
-        font-size:1.5rem;
-    }
-
-    .padding {
-        padding:7rem 0 0 0;
+        font-size:2rem;
     }
 
 }
@@ -92,16 +92,12 @@ h2 #attempts-remaining {
 @media only screen and (min-width: 768px) {
     
     header h1 {
-        font-size:3rem;
+        font-size:4rem;
         color:yellow;
     }
     
     #game-start {
-        font-size:1.5rem;
-    }
-
-    .padding {
-        padding:7rem 0 0 0;
+        font-size:3rem;
     }
 
 } 
@@ -115,10 +111,6 @@ h2 #attempts-remaining {
     
     #game-start {
         font-size:3rem;
-    }
-
-    .padding {
-        padding:15rem 0 0 0;
     }
 } 
 
