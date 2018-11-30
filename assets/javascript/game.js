@@ -93,8 +93,14 @@ for (i = 0; i < word.length; i++) {
                 document.getElementById("win").innerHTML = "Congratulations, you win!";
 
                 if (word === "ale") {
-                    document.getElementById("description-text").innerHTML = "A type of beer with a bitter flavor and higher alcoholic content."; 
+                    document.getElementById("description-text").innerHTML = "A type of beer with a bitter flavor and higher alcoholic content.";
                 
+                } else if (word === "amber") {
+                        document.getElementById("description-text").innerHTML = "Amber ale is an emerging term used in Australia, France and North America for pale ales brewed with a proportion of amber malt and sometimes crystal malt to produce an amber colour generally ranging from light copper to light brown.";
+
+                } else if (word === "brewpub") {
+                    document.getElementById("description-text").innerHTML = "Pub that makes its own beer and sells at least 50% of it on premises. Also known in Britain as a home-brew house and in Germany as a house brewery.";
+
                 } else if (word === "bung") {
                     document.getElementById("description-text").innerHTML = "The stopper in the hole in a keg or cask through which the keg or cask is filled and emptied. The hole may also be referred to as a bung or bunghole. Real beer must use a wooden bung.";
 
@@ -111,13 +117,13 @@ for (i = 0; i < word.length; i++) {
                     document.getElementById("description-text").innerHTML = "Herb added to boiling wort or fermenting beer to impart a bitter aroma and flavor.";
                     
                 } else if (word === "india pale ale") {
-                    document.getElementById("description-text").innerHTML = "A type of light-colored beer similar to bitter, typically with a higher than average alcohol and hop content.";
+                    document.getElementById("description-text").innerHTML = "India pale ale is a hoppy beer style within the broader category of pale ale. The term 'pale ale' originally denoted an ale brewed from pale malt. Among the first brewers known to export beer to India was George Hodgson's Bow Brewery, on the Middlesex-Essex border.";
 
                 } else if (word === "lauter") {
                     document.getElementById("description-text").innerHTML = "To run the wort from the mash tun. From the German word to clarify. A lauter tun is a separate vessel to do this job. It uses a system of sharp rakes to achieve a very intensive extraction of malt sugars.";
 
                 } else if (word === "pale ale") {
-                    document.getElementById("description-text").innerHTML = "Pale ale is an ale made with predominantly pale malt. The highest proportion of pale malts results in a lighter colour. The term "pale ale" first appeared around 1703 for beers made from malts dried with coke, which resulted in a lighter colour than other beers popular at that time.";
+                    document.getElementById("description-text").innerHTML = "Pale ale is an ale made with predominantly pale malt. The highest proportion of pale malts results in a lighter colour. The term 'pale ale' first appeared around 1703 for beers made from malts dried with coke, which resulted in a lighter colour than other beers popular at that time.";
 
                 } else if (word === "sparge") {
                     document.getElementById("description-text").innerHTML = "To spray grist with hot water in order to remove soluble sugars (maltose). This takes place at the end of the mash.";
