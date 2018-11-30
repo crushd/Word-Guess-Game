@@ -141,7 +141,7 @@ for (i = 0; i < word.length; i++) {
                     document.getElementById("description-text").innerHTML = "A micro-organism of the fungus family. Genus Saccharomyces. Yeast is responsible for converting sugars into alcohol.";
 
                 } else {
-                    document.getElementById("description-text").innerHTML = "Words about the word.";
+                    document.getElementById("description-text").innerHTML = "Some words about the word.";
                 }
 
                 $(document).ready(function(){

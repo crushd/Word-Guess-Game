@@ -38,8 +38,16 @@ h2 #attempts-remaining {
     font-family:'Sans Serif';
 }
 
-.result {
-    text-shadow: 2px 2px #000000;
+.winResult, .loseResult {
+    font-size:3em;
+}
+
+.winResult {
+    text-shadow: 2px 2px green;
+}
+
+.loseResult {
+    text-shadow: 2px 2px #666;
 }
 
 .card {
@@ -65,7 +73,7 @@ h2 #attempts-remaining {
         font-size:1.5rem;
     }
 
-    .result {
+    .winResult, .loseResult {
         font-size: 1em;
     }
 
