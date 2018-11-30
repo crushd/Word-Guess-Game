@@ -6,24 +6,23 @@ html,body {
 body {
     font-family: 'Lobster', cursive;
     color:white;
-}
-
-header h1 {
-    font-size:5em;
-}
-
-body {
     background: url(../images/beer1.jpg) no-repeat center center;
     background-size: 100%;
 }
 
+header h1 {
+    font-size:5em;
+    text-shadow: 2px 2px #ff0000;
+}
+
 .padding {
-    padding:15rem 0 0 0;
+    padding:20rem 0 0 0;
 }
 
 #game-start {
     padding:3rem 0;
     font-size:3em;
+    text-shadow: 2px 2px #ff0000;
 }
 
 h2 #attempts-remaining {
@@ -31,6 +30,11 @@ h2 #attempts-remaining {
     font-family:'Sans Serif';
 }
 
-h1 #result {
-    color:darkgreen;
+.result {
+    text-shadow: 2px 2px #000000;
+}
+
+.card {
+    color: black;
+    font-family: 'Roboto', sans-serif;
 }
