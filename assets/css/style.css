@@ -37,4 +37,5 @@ h2 #attempts-remaining {
 .card {
     color: black;
     font-family: 'Roboto', sans-serif;
+    width: 30rem;
 }

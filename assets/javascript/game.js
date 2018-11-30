@@ -1,6 +1,28 @@
 // set up the list of words
-var wordList = ["vorlauf","sparge","grain","hops","yeast","water","specific gravity","wort","malt","pale ale","grist",
-                "porter","fermentation","ale","amber","bung","brewpub","lauter","pitch","mash tun","stout","maltose","mash"];
+var wordList = ["vorlauf",
+                "sparge",
+                "grain",
+                "hops",
+                "yeast",
+                "water",
+                "specific gravity",
+                "wort",
+                "malt",
+                "pale ale",
+                "grist",
+                "india pale ale",
+                "porter",
+                "fermentation",
+                "ale",
+                "amber",
+                "bung",
+                "brewpub",
+                "lauter",
+                "pitch",
+                "mash tun",
+                "stout",
+                "maltose",
+                "mash"];
 
                 // stout - double letters
 
@@ -34,7 +56,7 @@ for (i = 0; i < word.length; i++) {
     $(document).on("keypress", function (e) {
 
         console.log(e.key);
-        if (word.indexOf(e.key) < 0) {
+        if (word.indexOf(e.key.toLowerCase()) < 0) {
             //console.log("Letter not found.");
             tryCounter++;
             
@@ -55,9 +77,9 @@ for (i = 0; i < word.length; i++) {
                 element = word.charAt(j);
                 // console.log(word.indexOf(j) + "Does " + element + " equal " + e.key + "?");
 
-                if (e.key === element) {
+                if (e.key.toLowerCase() === element) {
                     // console.log("Good guess");
-                    answerArray[j] = e.key;
+                    answerArray[j] = e.key.toLowerCase();
                     remainingLetters--;
                 }
 
@@ -93,6 +115,9 @@ for (i = 0; i < word.length; i++) {
                     document.getElementById("hangman-title").innerHTML = word;
                 } else if (word === "wort") {
                     document.getElementById("description-text").innerHTML = "The solution of grain sugars strained from the mash tun. At this stage, regarded as 'sweet wort', later as brewed wort, fermenting wort and finally beer.";
+                    document.getElementById("hangman-title").innerHTML = word;
+                } else if (word === "bung") {
+                    document.getElementById("description-text").innerHTML = "The stopper in the hole in a keg or cask through which the keg or cask is filled and emptied. The hole may also be referred to as a bung or bunghole. Real beer must use a wooden bung.";
                     document.getElementById("hangman-title").innerHTML = word;
                 } else {
                     document.getElementById("description-text").innerHTML = "Words about the word.";
