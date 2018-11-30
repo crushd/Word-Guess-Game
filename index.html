@@ -12,24 +12,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
     
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
    </head>
 
 
   <body>
     <div class="padding">
-        <div class="container">
 
-            <div class="text-center">
-                <h1 id="result"></h1>
-                <h1 id="game-start">Press any key to get started</h1>
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div class="col-md-8 text-center">
+
+                    <header class="text-center">
+                        <h1>Homebrew Hangman</h1>
+                    </header>
+
+                    <h1 id="result"></h1>
+                    <h1 id="game-start">Press any key to begin</h1>
+                    <h4><span id="attempts-remaining"></span></h4>
+                </div>
+
+                <div class="col-md-4 text-center"></div>
             </div>
-
-            <div class="text-center">
-                <h2><span id="attempts-remaining"></span></h2>
-            </div>
-
         </div>
+
     </div>
 
     <!-- Optional JavaScript -->

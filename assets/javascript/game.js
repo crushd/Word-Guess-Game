@@ -1,9 +1,8 @@
 // set up the list of words
-var wordList = ["vorlauf","sparge","grain","hops","yeast","water","gravity","wort","malt",
+var wordList = ["vorlauf","sparge","grain","hops","yeast","water","gravity","wort","malt","pale ale",
                 "porter","fermentation","ale","amber","bung","brewpub","lauter","pitch","mash tun"];
 
                 // stout - double letters
-                // pale ale
 
 // count how many words, console it
 //console.log("Words: " + wordList.length);
@@ -12,7 +11,7 @@ var wordList = ["vorlauf","sparge","grain","hops","yeast","water","gravity","wor
 var word = wordList[Math.floor(Math.random()*wordList.length)];
 
 // console the word
-//console.log("Word: " + word);
+console.log("Word: " + word);
 
 // console the character length of the word
 //console.log("Word Length: " + word.length);
@@ -46,10 +45,21 @@ for (i = 0; i < word.length; i++) {
 
         } else {
             //console.log("Letter found!" + word.indexOf(e.key));
-            answerArray[word.indexOf(e.key)] = e.key;
+            
+            for (var j=0 ; j < word.length ; j++) {
+                element = word.charAt(j);
+                console.log(word.indexOf(j) + "Does " + element + " equal " + e.key + "?");
+
+                if (e.key === element) {
+                    console.log("Good guess");
+                    answerArray[j] = e.key;
+                    remainingLetters--;
+                }
+
+            }
+                    
             document.getElementById("game-start").innerHTML = answerArray.join(" ");
             document.getElementById("attempts-remaining").innerHTML = "Attempts remaining: " + (maxTrys - tryCounter);
-            remainingLetters--;
 
             //console.log("Remaining: " + remainingLetters);
             if (remainingLetters === 0) {
