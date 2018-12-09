@@ -6,7 +6,7 @@ html,body {
 body {
     font-family: 'Lobster', cursive;
     color:white;
-    /*background: url(../images/beer1.jpg) no-repeat center center;*/
+    /*background: url(../images/beer1.jpg) no-repeat center center; */
     background-size: 75%;/**/
     background-color: black;
 }
@@ -23,7 +23,7 @@ header h1 {
 .jumbotron {
     background-size:100%;
     background-color:black;
-    /*background: url(../images/beer1.jpg) no-repeat center center;*/
+    background: url(../images/beer1.jpg) no-repeat center center;/**/
     height:100%;
 }
 
