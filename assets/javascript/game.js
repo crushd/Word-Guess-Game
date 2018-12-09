@@ -46,7 +46,7 @@ var wrongArray = [];
 var remainingLetters = word.length;
 
 // total guesses allowed
-var maxTrys = 10;
+var maxTrys = 6;
 
 // how many times has the user guessed
 var tryCounter = 0;
