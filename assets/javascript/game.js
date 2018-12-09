@@ -54,6 +54,8 @@ for (i = 0; i < word.length; i++) {
     }
 }
 
+$(document).ready(function() {
+
 
     $(document).on("keypress", function (e) {
 
@@ -176,4 +178,5 @@ for (i = 0; i < word.length; i++) {
     });
 
 
+});
 
