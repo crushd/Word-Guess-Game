@@ -54,23 +54,47 @@ var tryCounter = 0;
 // keep track of wins
 var gameWins = 0;
 
+function resetGame() {
+    word = wordList[Math.floor(Math.random()*wordList.length)];
+    answerArray = [];
+    wrongArray  = [];
+    remainingLetters = word.length;
+    maxTrys = 6;
+    tryCounter = 0;
 
-// loop through each character of the word to create the missing letter underlines
-for (i = 0; i < word.length; i++) {
+    document.getElementById("attempts-remaining").innerHTML = "";
+    
+    setupWord();
+    return console.log(word);
 
-    // if the word has a space
-    if (word[i] == " ") {
-        // add html space instead of an underline
-        answerArray[i] = "&nbsp;";
-        // remove the space as a potential guess from the word
-        remainingLetters--;
-    } else {
-        // otherwise just put an underline in place of each character
-        answerArray[i] = "_";
-    }
 }
 
+function setupWord() {
+    // loop through each character of the word to create the missing letter underlines
+    for (i = 0; i < word.length; i++) {
+
+        // if the word has a space
+        if (word[i] == " ") {
+            // add html space instead of an underline
+            answerArray[i] = "&nbsp;";
+            // remove the space as a potential guess from the word
+            remainingLetters--;
+        } else {
+            // otherwise just put an underline in place of each character
+            answerArray[i] = "_";
+        }
+    }
+    document.getElementById("game-start").innerHTML = answerArray.join(" ");
+    return("New: " + answerArray);
+
+}
+
+
+
+
 $(document).ready(function() {
+
+    setupWord();
 
     $(document).on("keypress", function (e) {
 
@@ -97,7 +121,9 @@ $(document).ready(function() {
 
             console.log("Remaining: " + remainingLetters);
             if (tryCounter >= maxTrys) {
-                document.getElementById("lose").innerHTML = "Sorry, Game Over";
+                //document.getElementById("lose").innerHTML = "Sorry, Game Over";
+                resetGame();
+
             }
 
         } else {
@@ -123,7 +149,8 @@ $(document).ready(function() {
             // if remainingLetters reaches zero
             if (remainingLetters <= 0) {
                 // then the user wins
-                document.getElementById("win").innerHTML = "Congratulations, you win!";
+                //document.getElementById("win").innerHTML = "Congratulations, you win!";
+                
                 
                 // add to the win counter
                 gameWins++;
@@ -207,11 +234,12 @@ $(document).ready(function() {
                 } else {
                     document.getElementById("description-text").innerHTML = "Some words about the word.";
                 }
-
+                
                     $('#attempts-remaining').css('visibility', 'hidden');
                     $('#wrongList').css('visibility', 'hidden');
                     $('#description').css('visibility', 'visible');
-               
+                
+                resetGame();
                 
             }
             
